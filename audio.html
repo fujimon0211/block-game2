@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>z
+<body>
+    <button id="bgm" onclick="location.href='game.html'" >ゲームスタート</button>
+</body>
+<script>
+var Bgms=["bo-tto hidamari.mp3","zannense.mp3"]
+window.AudioContext = window.AudioContext || window.webkitAudioContext;
+const ctx = new AudioContext();
+
+const audioBgmElement = document.querySelector("Bgms[0],Bgms[1]");
+// Web Audio API内で使える形に変換
+const track = ctx.createMediaElementSource(audioElement);
+
+document.querySelector("#bgm").addEventListener("click", () => {
+  if (ctx.state === "suspended") {
+    ctx.resume();
+  }
+  // 出力につなげる
+  track.connect(ctx.destination);
+  audioElement.play();
+ 
+});
+
+
+
+
+</script>
+</html>
