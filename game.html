@@ -15,7 +15,7 @@
 <body>
 <div id="game-box">
  
-dddd
+ 
    
   
 
@@ -29,6 +29,9 @@ dddd
 <audio id="audioElementThird" src="Motion-Pop36-1.mp3"></audio>
 
 <script>
+       const AudioContext = window.AudioContext || window.webkitAudioContext;
+
+const audioContext = new AudioContext();
 
             document.getElementById("audioBgm").play();
             audioBgm.currentTime = 0;

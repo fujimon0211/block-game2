@@ -16,6 +16,9 @@
 
     </div>
 <script>
+       const AudioContext = window.AudioContext || window.webkitAudioContext;
+
+const audioContext = new AudioContext();
 document.getElementById("audioClearBgm").play();
             audioOverBgm.currentTime = 0;
             audioOverBgm.play();
