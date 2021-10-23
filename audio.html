@@ -6,28 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>z
+    <link rel="stylesheet" href="audio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Rampart+One&family=Reggae+One&display=swap" rel="stylesheet">
+
+</head>
 <body>
-    <button id="bgm" onclick="location.href='game.html'" >ゲームスタート</button>
+  <div class="audio">
+  <div class="audio-header">
+<h1>ブ<sup>ロ</sup><sub>ッ</sub><sub>ク</sub>崩<sup>し</sup></h1>
+  </div>
+  <div class="audio-contents">
+    <input TYPE="button" VALUE="ゲームを始める" style="background:rgb(95, 71, 71);color:white;"onclick="location.href='game.html'" >
+  </div>
+</div>
 </body>
 <script>
-var Bgms=["bo-tto hidamari.mp3","zannense.mp3"]
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-const ctx = new AudioContext();
 
-const audioBgmElement = document.querySelector("Bgms[0],Bgms[1]");
-// Web Audio API内で使える形に変換
-const track = ctx.createMediaElementSource(audioElement);
 
-document.querySelector("#bgm").addEventListener("click", () => {
-  if (ctx.state === "suspended") {
-    ctx.resume();
-  }
-  // 出力につなげる
-  track.connect(ctx.destination);
-  audioElement.play();
- 
-});
+
 
 
 

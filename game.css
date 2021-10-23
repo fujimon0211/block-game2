@@ -1,6 +1,21 @@
-h1{
-    text-align:center;
+html{
+    width:100%;
+    height:100%;
+    background-image: url("");
+    background-color:;
+}
+.game{
+    height:50%;
+    width:100%;
 }
 #myCanvas{
-    margin-top:30px;
+    margin-top:30vx;
+}
+.canvas-parent {
+    width: 80%;
+    height: 50vh;
+}
+#timer-contents{
+    text-align: center;
+    color:red;
 }

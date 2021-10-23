@@ -1,0 +1,38 @@
+html{
+    background-color: black;
+}
+.game-over{
+    height: 100%;
+    width: 100%;
+    
+}
+.contents{
+    height:70vh;
+}
+.contents h1{
+    margin:80px;
+}
+.button-contents{
+    height:30vh;
+}
+button{
+    display:none;
+    width: 40%;
+    margin-left:460px;
+    margin-top:0px;
+    height:100px;
+}
+.eachTextAnime span{opacity: 0;}
+.eachTextAnime.appeartext span{ animation:text_anime_on 4.0s ease-out forwards; }
+@keyframes text_anime_on {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+.eachTextAnime{
+    
+    font-family: 'Creepster', cursive;   
+    
+  color: red;
+  font-size:190px;
+  text-align: center;
+}

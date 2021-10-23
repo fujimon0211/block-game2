@@ -1,0 +1,139 @@
+#timer-contents{
+    width: 130px;                /* 横幅を200pxに指定 */
+    height: 28px;               /* 横幅を200pxに指定 */
+    border: 1px solid #000;      /* わかりやすくボーダーを引く */
+    overflow-y: scroll;          /* 縦方向にスクロール可能にする */
+  }
+  #timer-contents {
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+  }
+  #timer-contents::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+  }
+  .test a{
+    background-color:red;
+    transition:all 0.5s 0s ease;
+  }
+  .test a:hover{
+background-color:blue;
+
+  }
+  button{
+    
+    transition-property: color;/*アニメーションをcolorのプロパティのみ適用*/
+    transition-duration: 0.8s;
+  }
+  button:hover{
+    background-color:blue;
+    color:red;
+  }
+  .clip{
+    background-color: red;
+    clip-path: circle(80px at 30% 50%);
+  }
+  .late1{
+    transition-property: color;
+    transition-duration:0.5s ;
+    transition-delay: 0.s;
+    writing-mode: horizontal-tb;/*水平方向左から*/
+    
+  }
+  img {
+   
+    float: left;/*floatは必須 */
+    shape-outside: circle(50%);
+}
+
+  .late2{
+    transition-property: color;
+    transition-duration:0.5s ;
+    transition-delay: 0.3s;
+    writing-mode: vertical-lr;/*縦書き左から*/
+  }
+  
+  .late3{
+    transition-property: color;
+    transition-duration:0.5s ;
+    transition-delay: 0.6s;
+    writing-mode: vertical-rl;/*縦書き右から*/
+  }
+  .late4{
+
+  }
+  .late5{
+
+  }
+
+  .eachTextAnime span{opacity: 0;}
+.eachTextAnime.appeartext span{ animation:text_anime_on 1s ease-out forwards; }
+@keyframes text_anime_on {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+.eachTextAnime{
+  font-family: 'ZCOOL KuaiLe', cursive;
+  color: red;
+  font-size:130px;
+  text-align: center;
+}
+mark{
+  background-color: red;
+}
+
+.grid-contents{
+  background-color: red;
+}
+.title{
+  display: none;
+}  
+.grid {
+
+display:flex;
+  }
+  .confetti {
+    position: relative;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    background: #000;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .confetti > span {
+    display: block;
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .confetti > span > span {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  
+  .confetti > span > span > span {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @keyframes rotateY {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  @keyframes rotate360 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /****** Base style. ******/
+ 

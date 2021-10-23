@@ -5,29 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gameOver</title>
+    <link rel="stylesheet" href="game-clear.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="contents" id="contents">
-        <h1>GAME Clear</h1>
-        <button class="play" onclick="window.location.reload();">play</button>
-        <iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-        <audio id="audioClearBgm" src="omedetou.mp3"></audio>
-<button id="clearBgm">pause</button>
-<audio src=""></audio>
+    <audio id="audioClear" src="mokuhyo.mp3" ></audio>
+    <div class="GameClear">
+        <div class="confetti">
+        <div class="game-clear-contents">
+        <h1 class="eachTextAnime">GAMECLEAR</h1>
+     
+    </div>
+    <div class="game-clear-btn-contents">
+        <button class="play" onclick="location.href='game.html'">もう一度プレイする</button>
+       
+    </div>
+</div>
 
     </div>
-<script>
-       const AudioContext = window.AudioContext || window.webkitAudioContext;
+ 
 
-const audioContext = new AudioContext();
-document.getElementById("audioClearBgm").play();
-            audioOverBgm.currentTime = 0;
-            audioOverBgm.play();
-
-
-
-
-</script>
-
+    <script src="game-clear.js"></script>
 </body>
 </html>

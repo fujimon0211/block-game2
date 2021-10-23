@@ -13,29 +13,37 @@
  
 </head>
 <body>
+<div class="game"> 
+    
 <div id="game-box">
- 
- 
+    <div id="timer-contents"> <h1></h1></div>
+
+   
+
+   
    
   
-
-    <h1 class="alert"></h1>
-  
 <canvas id="myCanvas" width="480" height="320"></canvas>
-<iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
 <audio src="bo-tto hidamari.mp3" id="audioBgm"></audio>
 <audio id="audioElement" src="se_damage13.mp3"></audio>
 <audio id="audioElementSecond" src="Onmtp-Inspiration11-1.mp3"></audio>
 <audio id="audioElementThird" src="Motion-Pop36-1.mp3"></audio>
-
+<audio id="audioElementForth" src="timecount.mp3" loop></audio>
+</div>
+</div>
+</body>
+</html>   
 <script>
-       const AudioContext = window.AudioContext || window.webkitAudioContext;
 
-const audioContext = new AudioContext();
+            
+            
 
             document.getElementById("audioBgm").play();
             audioBgm.currentTime = 0;
             audioBgm.play();
+           
+         
     //上記のキャンバス情報を取得
 	var canvas=document.getElementById("myCanvas");
     //2d画面に設定
@@ -86,14 +94,7 @@ const audioContext = new AudioContext();
         bricks[c][r] = { x: 0, y: 0, status:1};
     }
 }   
-canvas.addEventListener("touchstart", touchStart);
-        
-        canvas.addEventListener("touchmove", touchMove);
-        function touchMove(e){
-            console.log('タップしたまま移動中:' + e.touches);
-            x +=dx;
-            y +=dy;
-        }
+
     //デフォルトでの方向操作キーの状態を定義
     var rightPressed = false;
     var leftPressed = false;
@@ -110,6 +111,7 @@ canvas.addEventListener("touchstart", touchStart);
     if(relativeX > 0 && relativeX < canvas.width) {
         //パドルのx座標は相対座標-パドルの幅の半分（パドルの中点がパドルのx座標となる）
         paddleX = relativeX - paddleWidth/2;
+        
     }
     }
     //マウスを使った動作の関数
@@ -121,12 +123,14 @@ canvas.addEventListener("touchstart", touchStart);
         //パドルのx座標は相対座標-パドルの幅の半分（パドルの中点がパドルのx座標となる）
         paddleX = relativeX - paddleWidth/2;
     }
+ 
 }
+
    
 
     //右方向操作キーを押した時の状態
 function keyDownHandler(e) {
-    if(e.key == "Right" || e.key == "ArrowRight") {
+    if(e.key == "Right" || e.key == "ArrowRight"){
         rightPressed = true;
     }
     //左方向操作キーを押した時の状態
@@ -163,10 +167,11 @@ function collisionDetection() {
                 //スコアの数が、すべてのブロックの数と同じになったら、
                 if(score==brickRowCount*brickColumnCount){
                     //おめでとうメッセージの表示
-                    $(function(){
-			$("#game-box").load("GameClear.html");
+                   
+                        document.location.href = "GameClear.html";
+                   
             
-		          });
+		        
                     
 
                 };
@@ -290,6 +295,9 @@ function drawBricks() {
     //x,yにそれぞれ動かす
     x +=dx;
     y +=dy;
+
+    
+
     //頂点、底に行ったら跳ね返るようにする
     if( y + dy < 0) {
     dy = -dy;
@@ -310,14 +318,19 @@ function drawBricks() {
          lives--;
          if(!lives){   
     //警告文の表示
-    $(function(){
-			$("#game-box").load("gameOver.html");
+    function gameOver(){
+  
+       
+        document.location.href = "gameOver.html";
+           
+
             
             document.getElementById("audioOverBgm").play();
             audioOverBgm.currentTime = 0;
             audioOverBgm.play();
-		});
-
+		
+        }
+        gameOver();
        
     //クロームを再読み込み
         }
@@ -345,37 +358,87 @@ function drawBricks() {
     
 
 }
-var fn = function() {
-    $(function(){
-			$(".alert").text("あと10秒です");
-		});
-  if(i > 1) clearInterval(id);
-  i++;
+//タイマーカウントダウン
+var count = document.getElementById('timer-contents')
+function timeAlert(){
+    audioBgm.pause();
+    document.getElementById("audioElementForth").play();
+            audioElementForth.currentTime = 0;
+            audioElementForth.play();
+
 }
-var tm = 27000;
-var i = 1;
-var id = setInterval(fn,tm);
+function timeCount() {
+
+  count.innerHTML = "残り10秒です";    
+}
+function timeCount2() {
+
+  count.innerHTML = "残り9秒です";
+  
+  }
+function timeCount3() {
+
+count.innerHTML = "残り8秒です";
+}
+function timeCount4() {
+
+count.innerHTML = "残り7秒です";
+}
+function timeCount5() {
+
+count.innerHTML = "残り6秒です";
+}
+function timeCount6() {
+
+count.innerHTML = "<h1>残り5秒です</h1>";
+}
+function timeCount7() {
+
+count.innerHTML = "<h1>残り4秒です</h1>";
+}
+function timeCount8() {
+
+count.innerHTML = "<h1>残り3秒です</h1>";
+}
+function timeCount9() {
+
+count.innerHTML = "<h1>残り2秒です</h1>";
+}
+function timeCount10() {
+
+count.innerHTML = "<h1>残り1秒です</h1>";
+}
+function timeCount11(){
+    count.innerHTML = ""; 
+    document.location.href = "gameOver.html";
+}
+setTimeout(timeAlert,27000)
+setTimeout(timeCount, 27000);
+setTimeout(timeCount2, 28000);
+setTimeout(timeCount3, 29000);
+setTimeout(timeCount4, 30000);
+setTimeout(timeCount5, 31000);
+setTimeout(timeCount6, 32000);
+setTimeout(timeCount7, 33000);
+setTimeout(timeCount8, 34000);
+setTimeout(timeCount9, 35000);
+setTimeout(timeCount10, 36000);
+setTimeout(timeCount11, 37000);
 
 
 
 
-var Interval=setInterval(draw, 10);
-var log = function(){
-    $(function(){
-			$("#game-box").load("gameOver.html");
-            
-            document.getElementById("audioOverBgm").play();
-            audioOverBgm.currentTime = 0;
-            audioOverBgm.play();
-		});
-};
+
+
+var Interval=setInterval(draw, 7);
+
+
 
 setTimeout(log, 37000);
 
 
 
 </script>
-</div>
 
-</body>
-</html>
+
+
