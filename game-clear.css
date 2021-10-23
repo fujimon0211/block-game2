@@ -2,12 +2,14 @@
 padding: 0px;
 margin: 0px;  
 }
-
+html{
+  background-color: skyblue;
+}
 .GameClear{
   /*background-image: url("4945585_l.jpg");*/
   background-color: skyblue;
-  background-size: cover;
-    width: 100%;
+
+    width: 100vh;
     height:100vh;
 }
 .game-clear-contents{

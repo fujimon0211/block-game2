@@ -78,7 +78,7 @@
     //スコアの変数宣言
     var score=0;
     //ライフの変数宣言
-    var lives=3;
+    var lives=1;
     //残り時間の変数宣言
     var times=15;
     //以下ブロック生成の仕組み
@@ -191,7 +191,7 @@ function drawScore(){
     //色の設定
     ctx.fillStyle="#0095DD";
     //スコアを書く位置と、計算方法の設定
-    ctx.fillText("score:"+score,8,20);
+    ctx.fillText("壊したブロックの数:"+score,8,20);
 
 
 
@@ -203,7 +203,7 @@ function drawLives() {
     //色の設定    
     ctx.fillStyle = "#0095DD";
     //テキストの表示と位置の設定
-    ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+    ctx.fillText("残りライフ: "+lives, canvas.width-105, 20);
 }
 function drawTimes(){
  for($times=15;$times<15;$times--){
