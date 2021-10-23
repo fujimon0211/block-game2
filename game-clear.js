@@ -1,7 +1,12 @@
-document.getElementById("audioClear").play();
-            audioClear.currentTime = 0;
-            audioClear.play();
-            
+function audio() {
+
+
+
+  document.getElementById("audioClear").play();
+  audioClear.currentTime = 0;
+  audioClear.play();
+}
+audio();
             console.log = function (times) {
               document.getElementById('console_log').innerHTML += times + "<br>";
               }
