@@ -1,26 +1,6 @@
-*{
-    padding: 0px;
-    margin: 0px;
-}
-body{
-    background-color: skyblue;
-}
-@keyframes fadeIn  {
-
-    from {
-     opacity: 0;
-    }
-    to {
-     opacity: 1;   
-    }
-}
-.test2{
-    width: 100vw;
-}    
-h1{
-    text-align: center;
-    font-size:300px;
-    animation: fadeIn 1s ease;
-    color: red;
-    animation-iteration-count: 5;
+.canvas-parent {
+    width: 480px;
+    height: 320px;
+    background: #eee; display: block; margin: 0 auto;
+    
 }

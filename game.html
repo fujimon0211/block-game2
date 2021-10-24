@@ -5,6 +5,7 @@
     <title>GAME</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="game-mobile.css">
 
     <style>
     	* { padding: 0; margin: 0; }
@@ -23,7 +24,19 @@
    
    
   
-<canvas id="myCanvas" width="480" height="320"></canvas>
+<canvas id="myCanvas"  class="canvas-responsive" width="480" height="320"></canvas>
+<div id="leftButton" class="button" style="float:left">
+    <div>
+        <span class="left"></span>
+    </div>
+</div>
+
+<div id="rightButton" class="button" style="float:right">
+    <div>
+        <span class="right"></span>
+    </div>
+</div>
+</div>
 
 <audio src="bo-tto hidamari.mp3" id="audioBgm"></audio>
 <audio id="audioElement" src="se_damage13.mp3"></audio>
@@ -35,7 +48,17 @@
 </body>
 </html>   
 <script>
-
+ // canvas のレスポンシブ処理
+ function resize(){    
+          $(".canvas-responsive").outerHeight($(window).height()*2/5 -$(".canvas-responsive").offset().top- Math.abs($(".canvas-responsive").outerHeight(true) - $(".canvas-responsive").outerHeight()));
+        }
+        $(document).ready(function(){
+          resize();
+          $(window).on("resize", function(){                      
+              resize();
+          });
+        });
+        //outerHeight() 高さ取得、 .offset()  位置、　Math.abs() 絶対値、　
             
             
 
@@ -78,7 +101,7 @@
     //スコアの変数宣言
     var score=0;
     //ライフの変数宣言
-    var lives=1;
+    var lives=10;
     //残り時間の変数宣言
     var times=15;
     //以下ブロック生成の仕組み
@@ -93,7 +116,32 @@
     //変数bricksのプロパティc,rに配列を与える   
         bricks[c][r] = { x: 0, y: 0, status:1};
     }
-}   
+}  
+var leftButton = document.getElementById("leftButton");
+        leftButton.addEventListener("touchstart", touchLeft);
+        leftButton.addEventListener("touchend", touchLeft);
+        function touchLeft(e){
+            console.log('左はば' + canvas.width)
+            console.log('左：' + e.touches, e.type);
+            if(e.type == 'touchstart'){
+                leftPressed = true;
+            } else if(e.type == 'touchend'){
+                leftPressed = false;
+            }
+        }
+        var rightButton = document.getElementById("rightButton");
+        rightButton.addEventListener("touchstart", touchRight);
+        rightButton.addEventListener("touchend", touchRight);
+        function touchRight(e){
+            console.log('右はば' + canvas.width)
+            console.log('右：' + e.touches, e.type);
+            if(e.type == 'touchstart'){
+                rightPressed = true;
+            } else if(e.type == 'touchend'){
+                rightPressed = false;
+            }
+        }
+
 
     //デフォルトでの方向操作キーの状態を定義
     var rightPressed = false;

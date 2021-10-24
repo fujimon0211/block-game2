@@ -1,0 +1,10 @@
+@media(max-width:375px){
+
+    .canvas-parent {
+        width: 100%;
+        height: 50vh;
+        
+        
+    }
+    
+};

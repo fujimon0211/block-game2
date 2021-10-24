@@ -1,3 +1,8 @@
+*{
+    padding: 0; margin: 0;
+}
+
+
 html{
     width:100%;
     height:100%;
@@ -5,17 +10,76 @@ html{
     background-color:;
 }
 .game{
-    height:50%;
+    height:100vh;
     width:100%;
 }
 #myCanvas{
-    margin-top:30vx;
+    
+   margin-top:50px ;
 }
 .canvas-parent {
-    width: 80%;
-    height: 50vh;
+    width: 480px;
+    height: 320px;
+    background: #eee; display: block; margin: 0 auto;
+    
 }
 #timer-contents{
     text-align: center;
     color:red;
+}
+.button {
+    display: none;
+    vertical-align: middle;
+    text-align:center;
+    margin:32px;
+}
+
+.button div {
+    display: inline-block;
+    border-radius: 50%;
+}
+.left {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    border: 0.5em solid #333;
+    border-radius: 50%;
+    margin-right: 2.5em;
+}
+
+.left:after {
+    content: '';
+    display: inline-block;
+    margin-top: 1.05em;
+    margin-left: 0.6em;
+    width: 1.4em;
+    height: 1.4em;
+    border-top: 0.5em solid #333;
+    border-right: 0.5em solid #333;
+    -moz-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.right {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    border: 0.5em solid #333;
+    border-radius: 50%;
+    margin-left: 1.5em;
+}
+
+.right:after {
+    content: '';
+    display: inline-block;
+    margin-top: 1.05em;
+    margin-left: -0.6em;
+    width: 1.4em;
+    height: 1.4em;
+    border-top: 0.5em solid #333;
+    border-right: 0.5em solid #333;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }

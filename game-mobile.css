@@ -1,0 +1,10 @@
+
+@media (max-width:1000px){
+    .button {
+        display: inline-block;
+        vertical-align: middle;
+        text-align:center;
+        margin:32px;
+}
+
+}
