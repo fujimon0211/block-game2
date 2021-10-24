@@ -1,5 +1,10 @@
 
 @media (max-width:1000px){
+    .timer-contents{
+        font-size: 40px;
+    }
+   
+    
     .button {
         display: inline-block;
         vertical-align: middle;

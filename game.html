@@ -101,7 +101,7 @@
     //スコアの変数宣言
     var score=0;
     //ライフの変数宣言
-    var lives=10;
+    var lives=3;
     //残り時間の変数宣言
     var times=15;
     //以下ブロック生成の仕組み
@@ -417,24 +417,24 @@ function timeAlert(){
 }
 function timeCount() {
 
-  count.innerHTML = "残り10秒です";    
+  count.innerHTML = "<h1>残り10秒です</h1>";    
 }
 function timeCount2() {
 
-  count.innerHTML = "残り9秒です";
+  count.innerHTML = "<h1>残り9秒です</h1>";
   
   }
 function timeCount3() {
 
-count.innerHTML = "残り8秒です";
+count.innerHTML = "<h1>残り8秒です</h1>";
 }
 function timeCount4() {
 
-count.innerHTML = "残り7秒です";
+count.innerHTML = "<h1>残り7秒です</h1>";
 }
 function timeCount5() {
 
-count.innerHTML = "残り6秒です";
+count.innerHTML = "<h1>残り6秒です</h1>";
 }
 function timeCount6() {
 
@@ -460,7 +460,7 @@ function timeCount11(){
     count.innerHTML = ""; 
     document.location.href = "gameOver.html";
 }
-setTimeout(timeAlert,27000)
+setTimeout(timeCount,3000)
 setTimeout(timeCount, 27000);
 setTimeout(timeCount2, 28000);
 setTimeout(timeCount3, 29000);
