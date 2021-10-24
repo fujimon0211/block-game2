@@ -217,4 +217,4 @@ function delayButton() {
 
 
 }
-setTimeout(delayButton, 13000);
+setTimeout(delayButton, 11000);
