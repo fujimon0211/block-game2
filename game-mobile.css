@@ -1,7 +1,8 @@
 
 @media (max-width:1000px){
-    .timer-contents{
-        font-size: 40px;
+    .timer-contents h1{
+        padding-top: 15px;
+        font-size: 30px;
     }
    
     
