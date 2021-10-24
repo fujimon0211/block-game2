@@ -40,17 +40,17 @@ html{
 }
 .left {
     display: inline-block;
-    width: 4em;
-    height: 4em;
+    width: 8em;
+    height: 8em;
     border: 0.5em solid #333;
     border-radius: 50%;
-    margin-right: 2.5em;
+    margin-left: 5.5em;
 }
 
 .left:after {
     content: '';
     display: inline-block;
-    margin-top: 1.05em;
+    margin-top: 3.05em;
     margin-left: 0.6em;
     width: 1.4em;
     height: 1.4em;
@@ -63,8 +63,8 @@ html{
 
 .right {
     display: inline-block;
-    width: 4em;
-    height: 4em;
+    width: 8em;
+    height: 8em;
     border: 0.5em solid #333;
     border-radius: 50%;
     margin-left: 1.5em;
@@ -73,7 +73,7 @@ html{
 .right:after {
     content: '';
     display: inline-block;
-    margin-top: 1.05em;
+    margin-top: 3.05em;
     margin-left: -0.6em;
     width: 1.4em;
     height: 1.4em;
