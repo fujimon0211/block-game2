@@ -201,7 +201,7 @@ $(window).on('load', function () {
       $(this).html(textbox);
     });
   
-   setTimeout( EachTextAnimeControl, 2500);/* アニメーション用の関数を呼ぶ*/
+  setTimeout(EachTextAnimeControl, 2500);/* アニメーション用の関数を呼ぶ*/
   });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
 
