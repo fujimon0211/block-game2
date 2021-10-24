@@ -1,0 +1,19 @@
+@media(max-width:1000px){
+    .game-over{
+        height: 100%;
+        width: 100%;
+        
+    }
+    .contents h1{
+        margin: 0px;
+      }
+    .eachTextAnime{
+        padding-top:260px;
+        font-size:220px;
+    }  
+   
+    .play{
+        width:65%;
+        height:200px;
+    }
+}

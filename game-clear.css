@@ -9,7 +9,7 @@ html{
   /*background-image: url("4945585_l.jpg");*/
   background-color: skyblue;
   background-size: cover;
-    width: 100%;
+    width: 100vw;
     height:100vh;
 }
 .game-clear-contents{
@@ -23,7 +23,7 @@ html{
 }
 .play{
   display:none;
-  margin-top: 30px;
+
 }
 .eachTextAnime span{opacity: 0;}
 .eachTextAnime.appeartext span{ animation:text_anime_on 4.0s ease-out forwards; }
@@ -34,7 +34,7 @@ html{
 .eachTextAnime{
 
   font-family: 'Cinzel', serif;
-
+  width: 100vw;
   padding-top:160px;  
   color:rgb(53, 53, 114);
   font-size:160px;

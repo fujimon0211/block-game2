@@ -1,0 +1,30 @@
+@media(max-width:1000px){
+    body{
+        padding: 0px;
+        margin: 0px;  
+        }
+    .GameClear{
+        /*background-image: url("4945585_l.jpg");*/
+        overflow: hidden;
+          width: 100vw;
+          height:100vh;
+      }
+      .game-clear-contents{
+       
+        width:100%;
+        background-size: cover;
+      
+        
+    }
+    .eachTextAnime{
+        font-size:140px;
+        width: 100vw;
+        padding-top:260px; 
+      }
+    .play{
+          width:65%;
+          height:200px;
+      }
+
+
+}
