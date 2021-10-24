@@ -65,7 +65,60 @@ background-color:blue;
 
   }
 
-  .eachTextAnime span{opacity: 0;}
+
+
+
+thead{
+  color: blue;
+} 
+tbody{
+  color: red;
+} 
+tfoot{
+  color: green;
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.eachTextAnime span{opacity: 0;}
 .eachTextAnime.appeartext span{ animation:text_anime_on 1s ease-out forwards; }
 @keyframes text_anime_on {
 	0% {opacity:0;}

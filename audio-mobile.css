@@ -1,0 +1,11 @@
+@media(max-width:1000px){
+    
+.audio-header h1{
+font-size:70px;
+}
+input{
+    width: 80%;
+}
+
+
+}

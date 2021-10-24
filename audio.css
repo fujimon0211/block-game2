@@ -24,11 +24,12 @@ margin:0;
     height:400px;
     text-align: center;
     padding-top:300px;
+    width: 100vw;
     
 }
 input{
  
     height:70px;
-    width:390px;
+    width:30%;
     }
 
