@@ -408,12 +408,28 @@ function drawBricks() {
 }
 //タイマーカウントダウン
 var count = document.getElementById('timer-contents')
+
+const stopSound = $('audioElementForth').get(0);
 function timeAlert(){
     audioBgm.pause();
+    stopSound.muted = true;
+    stopSound.play();
+    stop();
     document.getElementById("audioElementForth").play();
             audioElementForth.currentTime = 0;
             audioElementForth.play();
 
+}
+function stop() {
+    // ルーレットストップ
+    setTimeout(function(){
+        // ミュート解除
+        stopSound.muted = false;
+        // 再生時間を0に戻す
+        stopSound.currentTime = 0;
+        // 改めて再生
+        stopSound.play();
+    }, 2800);
 }
 function timeCount() {
 
