@@ -1,63 +1,29 @@
-@keyframes spin {
-    from {
-      transform: rotateY(0);
-    }
-    to {
-      transform: rotateY(1turn);
-    }
-  }
-  
-  .card {
-    animation: spin 5s ease;
-    animation-iteration-count: infinite;
-  }
-  
-  .container {
-    perspective: 500px;
-    text-align: center;
-  
-  }
-  .card2 {
-    animation: spin 5s ease;
-    animation-iteration-count: infinite;
-  }
-  
-  .container2 {
-    perspective: 500px;
-    text-align: center;
-    
-  }
-  .card3 {
-    animation: spin 5s ease;
-    animation-iteration-count: infinite;
-  }
-  
-  .container3 {
-    perspective: 500px;
-    text-align: center;
 
-  }
-  .card4 {
-    animation: spin 5s ease;
-    animation-iteration-count: infinite;
-  }
+
+
+  .ball-contents{
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto
+    ;
   
-  .container4 {
-    perspective: 500px;
-    text-align: center;
-    
-  }
-  .card5 {
-    animation: spin 5s ease;
-    animation-iteration-count: infinite;
-  }
+    display: flex;
   
-  .container5 {
-    perspective: 500px;
-    text-align: center;
+  }
+  .ball-one{
     
+   width: 30%;
+    background-color:black;
   }
-  textarea{
-    display: block;
-    margin: 0 auto;
-  }
+  .ball-two{
+  
+    width: 30%;
+    background-color:yellow;
+   }
+   .ball-three{
+   
+    width: 30%;
+    background-color: red;
+   }
+
+

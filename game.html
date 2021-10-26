@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="game"> 
-    
+   <img src="white_00081.jpg" class="background">
 <div id="game-box">
     <div id="timer-contents"> <h1></h1></div>
 
@@ -409,40 +409,34 @@ function drawBricks() {
 //タイマーカウントダウン
 var count = document.getElementById('timer-contents')
 
-const stopSound = $('audioElementForth').get(0);
 function timeAlert(){
     audioBgm.pause();
-    stopSound.muted = true;
-    stopSound.play();
-    stop();
     document.getElementById("audioElementForth").play();
             audioElementForth.currentTime = 0;
             audioElementForth.play();
 
 }
-function stop() {
-    // ルーレットストップ
-    setTimeout(function(){
-        // ミュート解除
-        stopSound.muted = false;
-        // 再生時間を0に戻す
-        stopSound.currentTime = 0;
-        // 改めて再生
-        stopSound.play();
-    }, 2800);
+function timeCountBefore(){
+    audioBgm.pause();
 }
+
 function timeCount() {
 
-  count.innerHTML = "<h1 style='font-size:60px;'>残り10秒です</h1>";    
+  count.innerHTML = "<h1 style='font-size:60px;'>残り10秒でカウント始まります</h1>";
+  
 }
 function timeCount2() {
 
   count.innerHTML = "<h1 style='font-size:60px;'>残り9秒です</h1>";
-  
+  audioBgm.pause();
+    document.getElementById("audioElementForth").play();
+            audioElementForth.currentTime = 0;
+            audioElementForth.play();
   }
 function timeCount3() {
 
 count.innerHTML = "<h1 style='font-size:60px;'>残り8秒です</h1>";
+timerAlert(); 
 }
 function timeCount4() {
 
@@ -476,6 +470,7 @@ function timeCount11(){
     count.innerHTML = ""; 
     document.location.href = "gameOver.html";
 }
+
 setTimeout(timeCount,16000)
 setTimeout(timeCount, 17000);
 setTimeout(timeCount2, 18000);
